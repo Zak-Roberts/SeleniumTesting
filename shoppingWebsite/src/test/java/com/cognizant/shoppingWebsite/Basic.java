@@ -29,8 +29,7 @@ public class Basic {
 	}
 
 	@Test
-	// creates user then tries to login as created user
-	public void createLoginUser() throws InterruptedException {
+	public void findChiffonDress() throws InterruptedException {
 		driver.manage().window().maximize();
 		driver.get("http://automationpractice.com/index.php");
 		WebElement textbox = driver.findElement(By.xpath("//*[@id=\"search_query_top\"]"));
