@@ -32,7 +32,7 @@ public class IntermediateDDT2 {
 
 	@BeforeClass
 	static public void initial() {
-		reports = new ExtentReports("C:/Users/admin/Desktop/AutomatedTesting/Reports/DemoSiteReport.html", true);
+		reports = new ExtentReports("C:/Users/admin/Desktop/AutomatedTesting/Reports/DemoSiteDDT2Report.html", true);
 	}
 
 	@AfterClass

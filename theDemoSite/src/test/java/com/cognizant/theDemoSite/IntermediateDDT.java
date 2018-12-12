@@ -32,7 +32,7 @@ public class IntermediateDDT {
 
 	@BeforeClass
 	static public void initial() {
-		reports = new ExtentReports("C:/Users/admin/Desktop/AutomatedTesting/Reports/DemoSiteReport.html", true);
+		reports = new ExtentReports("C:/Users/admin/Desktop/AutomatedTesting/Reports/DemoSiteDDTReport.html", true);
 	}
 
 	@AfterClass
@@ -113,7 +113,7 @@ public class IntermediateDDT {
 			test.log(LogStatus.FAIL, e.getStackTrace().toString());
 		}
 		
-		XSSFRow row = sheet.getRow(2);
+		XSSFRow row = sheet.getRow(1);
 		XSSFCell cell = row.getCell(3);
 		if (cell == null) {
 			cell = row.createCell(3);
@@ -147,7 +147,7 @@ public class IntermediateDDT {
 		XSSFRow passwordRow = sheet.getRow(2);
 		String passwordCol = passwordRow.getCell(1).getStringCellValue();
 		
-		test = reports.startTest("Login Test 1");
+		test = reports.startTest("Login Test 2");
 		driver.manage().window().maximize();
 		driver.get("http://thedemosite.co.uk/addauser.php");
 		WebElement username = driver.findElement(By.xpath(
