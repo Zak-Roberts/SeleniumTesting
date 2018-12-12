@@ -4,7 +4,6 @@ import static org.junit.Assert.*;
 
 import org.junit.After;
 import org.junit.AfterClass;
-import org.junit.Assert;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -108,9 +107,12 @@ public class Intermediate {
 			}
 			
 		} catch (NoSuchElementException e) {
+			//Assert.fail("The 'Printed Chiffon Dress' was not found!");
 			test.log(LogStatus.FAIL, "The 'Printed Chiffon Dress' was not found!");
 			fail();
 		}
+		//Assert.assertNotNull(dress);
+		//Assert.assertEquals("Printed Chiffon Dress not displayed", true, dressTitle.contains("Printed Chiffon Dress"));
 	}
 
 }
