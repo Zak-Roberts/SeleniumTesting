@@ -42,7 +42,7 @@ public class Basic {
 				WebElement divInputs = div.findElement(By.tagName("input"));
 				divInputs.sendKeys("London");
 				Thread.sleep(1000);
-				action.sendKeys("11/12/2018" + Keys.TAB).perform();
+				action.sendKeys(Keys.TAB + "11/12/2018" + Keys.TAB).perform();
 				Thread.sleep(1000);
 				action.sendKeys("13/12/2018" + Keys.TAB).perform();
 				Thread.sleep(1000);
