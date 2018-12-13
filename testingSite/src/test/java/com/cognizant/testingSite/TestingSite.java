@@ -2,6 +2,7 @@ package com.cognizant.testingSite;
 
 import static org.junit.Assert.*;
 
+
 import java.util.concurrent.TimeUnit;
 import org.junit.After;
 import org.junit.Before;
@@ -42,14 +43,14 @@ public class TestingSite {
 	@Test
 	public void findIHateYouImplicit() throws InterruptedException {
 
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		driver.get("https://christophperrins.github.io/TestingSite/");
-		boolean header1 = driver.findElement(By.tagName("h1")).isDisplayed();
+		boolean header1 = driver.findElement(By.tagName("h2")).isDisplayed();
 
 		try {
 			WebElement header = null;
 			if (header1) {
-				header = driver.findElement(By.tagName("h1"));
+				header = driver.findElement(By.tagName("h2"));
 			}
 			assertEquals("not equal to 'I HATE YOU!'", "I HATE YOU!", header.getText());
 		}
@@ -59,15 +60,15 @@ public class TestingSite {
 	}
 
 	@Test
-	public void findIHateYouExplicit() throws InterruptedException {
+	public void findIHateYouExplicit() throws InterruptedException {		// for THIS webelement - specific to web elements
 		driver.get("https://christophperrins.github.io/TestingSite/");
-		boolean header1 = (new WebDriverWait(driver, 10)).until(ExpectedConditions.presenceOfElementLocated(By.tagName("h1"))).isDisplayed();
+		boolean header1 = (new WebDriverWait(driver, 10)).until(ExpectedConditions.presenceOfElementLocated(By.tagName("h2"))).isDisplayed();
 		try {
 			WebElement header = null;
 			if (header1) {
-				header = driver.findElement(By.tagName("h1"));
+				header = driver.findElement(By.tagName("h2"));
 			}
-			assertEquals("not equal to 'I HATE YOU!'", "I HATE YOU!", header.getText());
+			assertEquals("not equal to 'I HATE YOU!'", "-The Shafeeq", header.getText());
 		}
 		catch (NullPointerException e) {
 
