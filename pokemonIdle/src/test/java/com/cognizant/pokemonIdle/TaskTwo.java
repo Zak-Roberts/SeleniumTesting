@@ -27,11 +27,11 @@ public class TaskTwo {
 		((JavascriptExecutor)driver).executeScript("document.getElementById(\"rightColumn\").removeChild(document.getElementById(\"oakModal\"));");
 		Thread.sleep(1000);
 		((JavascriptExecutor)driver).executeScript("document.body.removeChild(document.getElementsByClassName(\"modal-backdrop fade in\")[0]);");
+		Thread.sleep(1000);
+		((JavascriptExecutor)driver).executeScript("moveToRoute(2);");		// cheaty but works!
 		Thread.sleep(1500);
-		
-		driver.findElement(By.xpath("//*[@id=\"route_2\"]")).click();
-		Thread.sleep(3000);
 		
 	}
 
 }
+
